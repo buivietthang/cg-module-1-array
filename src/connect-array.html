@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1 = new Array(10)
+    for (let i = 0; i < arr1.length; i++) {
+        arr1[i] = Math.floor(Math.random() * 100 - 50)
+        document.write(arr1[i] + ", ")
+    }
+    document.write("<br>")
+    let arr2 = new Array(10)
+    for (let i = 0; i < arr2.length; i++) {
+        arr2[i] = Math.floor(Math.random() * 100 - 50)
+        document.write(arr2[i] + ", ")
+    }
+    let arr3 = arr1.concat(arr2);
+    document.write("<br>" + arr3)
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = new Array(10)
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = Math.floor(Math.random() * 100 - 50)
+    }
+    let nhapSo = +prompt("Nhập số")
+    arr.push(nhapSo)
+    document.write(arr)
+    document.write("<br>")
+    if (nhapSo === 20) {
+        alert("V is in the array")
+    } else {
+        alert("V is not in the array")
+    }
+</script>
+</body>
+</html>

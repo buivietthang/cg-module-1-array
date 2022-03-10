@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = new Array(10);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = Math.floor(Math.random() * 100 - 50);
+        document.write(arr[i] + ", ");
+    }
+    let max = arr[0];
+    let total = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+        total += arr[i];
+    }
+    let average = total / 10
+    document.write("<br>" + "Số lớn nhất là: " + max + ", trung bình của tất cả các số là: " + average)
+</script>
+</body>
+</html>

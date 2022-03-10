@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = new Array(10)
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = Math.floor(Math.random() * 100 - 50)
+        // document.write(arr[i] + ", ")
+    }
+    // Cách 1: Dùng for
+    // for (let i = 0; i < arr.length; i++) {
+    //     for (let i = 0; i < arr.length; i++) {
+    //         let temp = arr[i + 1];
+    //         if (arr[i] > arr[i + 1]) {
+    //             arr[i + 1] = arr[i];
+    //             arr[i] = temp
+    //         }
+    //     }
+    // }
+    // document.write("<br>" + arr)
+
+    // Cách 2: Dùng hàm
+    arr.sort(function (a, b) {
+        return a - b
+    })
+    document.write(arr)
+</script>
+</body>
+</html>

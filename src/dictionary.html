@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h1>Từ điển Anh - Việt</h1>
+<body>
+<label>Nhập từ Tiếng Anh <input type="text" id="tiengAnh"></label>
+<input type="button" value="Dịch" onclick="dich()">
+<p id="result"></p>
+</body>
+<script>
+    function dich() {
+        let tiengAnh = document.getElementById("tiengAnh").value;
+        let english = ["Dog", "Cat", "Pig", "Chicken"]
+        let vietNam = ["Chó", "Mèo", "Lợn", "Gà"]
+        let flag = true
+        for (let i = 0; i < vietNam.length; i++) {
+            if (vietNam[i] === tiengAnh) {
+                document.getElementById("result").innerHTML = english[i];
+                break;
+            }
+            if (english[i] === tiengAnh) {
+                flag = false
+                document.getElementById("result").innerHTML = vietNam[i];
+                break;
+            }
+        }
+        if (flag === true) {
+            document.getElementById("result").innerHTML = "Từ này không có"
+        }
+    }
+</script>
+</html>

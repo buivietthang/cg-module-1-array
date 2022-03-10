@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = new Array(10);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = Math.floor(Math.random() * 100 - 50);
+        document.write(arr[i] + ", ");
+    }
+    let arrDao = arr.reverse()
+    document.write("<br>" + "Dãy số đảo ngược là: " + arrDao)
+</script>
+</body>
+</html>
